@@ -125,6 +125,18 @@
 
 1. in postman, DELETE `http://localhost:3000/notes/1`
   * you should get nothing in return
+1. add the active model serializer gem
+  * `gem 'active_model_serializers', '~> 0.9.3'`
+1. generate a note serializer
+  * `rails g serializer model`
+1. add the following to `config/initializers/active_model_serializers.rb`
+
+  ```
+  ActiveModel::Serializer.setup do |config|
+    config.embed = :ids
+    config.embed_in_root = true
+  end
+  ```
 
 ## OPTIONAL - Adding an API documentation view
 
