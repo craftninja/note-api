@@ -47,7 +47,7 @@
   config.middleware.insert_before 0, "Rack::Cors" do
     allow do
       origins '*'
-      resource '*', :headers => :any, :methods => [:get, :post, :options]
+      resource '*', :headers => :any, :methods => [:get, :post, :options, :delete]
     end
   end
   ```
@@ -137,6 +137,10 @@
     config.embed_in_root = true
   end
   ```
+1. in each action in the controller, instead of `render json: @note`:
+  * `render json: {note: @note}`
+  * follow this pattern for `@notes` as well.
+1. test out all actions in postman
 
 ## OPTIONAL - Adding an API documentation view
 
