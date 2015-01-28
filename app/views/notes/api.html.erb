@@ -1,0 +1,40 @@
+<h1>This is an API for Notes</h1>
+<h3>Notes have a title and body</h3>
+<ul>
+  <li>To see all notes:</li>
+  <ul>
+    <li>GET '/notes'</li>
+    <li><%= link_to "see what this looks like", notes_path %></li>
+    <li>all notes will be the response</li>
+  </ul>
+  <li>To see a single note:</li>
+  <ul>
+    <li>GET '/notes/:id'</li>
+    <li>the single note will be the response</li>
+  </ul>
+  <li>To create a new note:</li>
+  <ul>
+    <li>POST '/notes'</li>
+    <li>form data keys are:</li>
+    <ul>
+      <li>note[title]</li>
+      <li>note[body]</li>
+    </ul>
+    <li>the created note will be the response</li>
+  </ul>
+  <li>To update a note:</li>
+  <ul>
+    <li>PATCH '/notes/:id'</li>
+    <li>form data keys are:</li>
+    <ul>
+      <li>note[title]</li>
+      <li>note[body]</li>
+    </ul>
+    <li>the updated note will be the response</li>
+  </ul>
+  <li>To delete a note:</li>
+  <ul>
+    <li>DELETE '/notes/:id'</li>
+    <li>an empty response will be the response</li>
+  </ul>
+</ul>

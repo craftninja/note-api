@@ -1,5 +1,8 @@
 class NotesController < ApplicationController
 
+  def api
+  end
+
   def index
     @notes = Note.all
     render json: @notes
