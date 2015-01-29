@@ -137,9 +137,8 @@
     config.embed_in_root = true
   end
   ```
-1. in each action in the controller, instead of `render json: @note`:
-  * `render json: {note: @note}`
-  * follow this pattern for `@notes` as well.
+1. in each the `note_serializer.rb`, add title and body attributes:
+  * `  attributes :id, :title, :body`
 1. test out all actions in postman
 
 ## OPTIONAL - Adding an API documentation view
